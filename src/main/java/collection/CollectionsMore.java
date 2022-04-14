@@ -1,4 +1,4 @@
-package itterator;
+package collection;
 import java.util.*;
 
 public class CollectionsMore {
