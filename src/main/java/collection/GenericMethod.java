@@ -9,11 +9,13 @@ public class GenericMethod {
         massivenikursat(intMassiv);
         massivenikursat(charMassive);
 
+
         System.out.println(maximum(1,2,4,9,8,3,8,6,8161,0,-78));
         System.out.println(maximum('a','d','t','e','u','v','s','q','h','z'));
         System.out.println(maximum("Nodir","Bobur","Umed","DJone","Zyod"));
     }
 
+    @SafeVarargs
     private static <T extends Comparable<T>> T maximum(T ... qiymat){
         Arrays.sort(qiymat);
         return qiymat[qiymat.length - 1];
@@ -27,11 +29,11 @@ public class GenericMethod {
     }
 
     //ODDIY TYPE
-//    private static void massivenikursat(Integer[] massive){
-//        for (Integer x: massive)
-//            System.out.printf("%s ", x);
-//        System.out.println();
-//    }
+    private static void massivenikursat(Integer[] massive){
+        for (Integer x: massive)
+            System.out.printf("%s ", x);
+        System.out.println();
+    }
 
 
 }
