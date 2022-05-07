@@ -24,4 +24,6 @@ public class HashSetList {
         System.out.println(lugat);
     }
     // dublikat saqlamaydi
+
+
 }
