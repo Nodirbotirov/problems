@@ -28,7 +28,7 @@ public class GenericMethod {
         System.out.println();
     }
 
-    //ODDIY TYPE
+    //ODDIY TYPEw
     private static void massivenikursat(Integer[] massive){
         for (Integer x: massive)
             System.out.printf("%s ", x);

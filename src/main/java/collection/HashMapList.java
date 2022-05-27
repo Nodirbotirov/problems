@@ -2,7 +2,7 @@ package collection;
 
 import java.util.*;
 
-public class HashSetList {
+public class HashMapList {
 
     public static void main(String[] args) {
         String[] massiv = {"olma" ,"anor","shaftoli", "xurmo", "anor"};
@@ -20,6 +20,7 @@ public class HashSetList {
         lugat.put(4, "turt");
         lugat.put(5, "besh");
         lugat.put(5, "fife");
+        System.out.println(lugat.get(2));
 
         System.out.println(lugat);
     }
