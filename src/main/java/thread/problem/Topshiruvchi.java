@@ -8,13 +8,13 @@ public class Topshiruvchi extends Thread{
     }
 
     public void run(){
-        String malumot = "";
+        String mahsulot = "";
 
         for (int count = 0; count < 10; count++){
-            malumot = ombor.magsulotniTopshirish();
+            mahsulot = ombor.mahsulotniTopshirish();
 
             System.out.println("Buyurtmachi "  +
-                    malumot + "ni oldii.");
+                    mahsulot + "ni oldii.");
             try {
                 sleep(125);
             }catch (InterruptedException e){
