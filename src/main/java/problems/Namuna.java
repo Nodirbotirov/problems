@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Namuna {
     public static void main(String[] args) {
-        String muntazamIfoda = "zar";
+        String muntazamIfoda = "z[a-r]r";
 
         String matn = "zerikarle zarar zar munozara kazarma nazar zarur zarb buldozae lazer ozor" +
                 " bozor televezor ozor bozor hozir vazir zirak ziravor huzur zurriyat";
