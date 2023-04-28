@@ -26,6 +26,6 @@ public class Namuna {
         }
         System.out.println(matn);
         System.out.println(new String(belgi));
-        System.out.println("Jami "+sanoq+"-ta mostlik topildi");
+        System.out.println("xammasi "+sanoq+"-ta mostlik topildi");
     }
 }
