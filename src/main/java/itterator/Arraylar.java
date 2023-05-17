@@ -2,7 +2,7 @@ package itterator;
 
 import java.util.*;
 
-public class Arraylar {
+public class  Arraylar {
     public static void main(String[] args) {
         int[] massive1 = {6,3,1,7,9,5,-8,2,0,4,-1,8};
         System.out.println(Arrays.toString(massive1));
