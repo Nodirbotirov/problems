@@ -1,6 +1,6 @@
 package biginning;
 
-public class Beginning {
+public class Methods {
 
 
     public static void main(String[] args) {
@@ -27,7 +27,27 @@ public class Beginning {
         System.out.println(max2);
         System.out.println(max3);
 
+        System.out.println(sum(5, 10));
+        System.out.println(sum(5.5, 10.0));
+        System.out.println(sum(5f, 10f));
+
     }
+
+    private static double sum(double a, double b) {
+        return a + b;
+    }
+
+    private static int sum(int a, int b) {
+        return a + b;
+    }
+
+    private static float sum(float a, float b) {
+        return a + b;
+    }
+
+
+
+
 
     public static int findMax(int a, int b, int c){
         int max;
@@ -58,6 +78,7 @@ public class Beginning {
 //
 //        return c;
 //    }
+
 
 
 
