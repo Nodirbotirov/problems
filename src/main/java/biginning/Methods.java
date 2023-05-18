@@ -31,6 +31,7 @@ public class Methods {
         System.out.println(sum(5.5, 10.0));
         System.out.println(sum(5f, 10f));
 
+        ism("Nodir");
     }
 
     private static double sum(double a, double b) {
@@ -43,6 +44,10 @@ public class Methods {
 
     private static float sum(float a, float b) {
         return a + b;
+    }
+
+    private static void ism(String ism){
+        System.out.println("Ism=" + ism);
     }
 
 
@@ -58,6 +63,18 @@ public class Methods {
             max = b;
         }else {
             max = c;
+        }
+        return max;
+    }
+
+    static int employee(int arr[]){
+//        int i;
+
+        int max = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i];
         }
         return max;
     }
