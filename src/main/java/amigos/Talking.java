@@ -10,7 +10,7 @@ public class Talking {
         System.out.println("What is your name?");
 
         String userName = scanner.nextLine();
-        System.out.println("Hello " + userName);
+        System.out.println("Hello" + userName);
 
         System.out.println("How old are you?");
         int age = scanner.nextInt();

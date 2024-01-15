@@ -6,7 +6,7 @@ public class SearchLetter {
     public static void main(String[] args) {
         //Method
         char[] letters = {'A', 'A', 'B', 'C', 'D', 'D', 'D'};
-        int count = countOccurrences(letters, 'C');
+        int count = countOccurrences(letters, 'A');
         System.out.println(count);
     }
 
