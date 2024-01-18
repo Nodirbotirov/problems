@@ -2,8 +2,8 @@ package codingBat;
 
 public class CountXxx {
     public static void main(String[] args) {
-        String str = "sxxxxxxxx";
-        countXX(str);
+        String www = "sxxxxxxxx";
+        countXX(www);
     }
     static int countXX(String str) {
         int count = 0;

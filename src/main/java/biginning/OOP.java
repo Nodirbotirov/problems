@@ -5,7 +5,7 @@ public class OOP {
 
         Methods methods = new Methods();
 
-        int[] forMethods = new int[]{4, 5, 6, 10, 4};
+        int[] forMethods = new int[]{4, 5, 6, 10, 4, 15};
 
         System.out.println(Methods.employee(forMethods));
 
