@@ -12,7 +12,7 @@ public class GenericMethod {
 
         System.out.println(maximum(1,2,4,9,8,3,8,6,8161,0,-78));
         System.out.println(maximum('a','d','t','e','u','v','s','q','h','z'));
-        System.out.println(maximum("Nodir","Bobur","Umed","DJone","Zyod"));
+        System.out.println(maximum("Nodir","Bobur","Umed","DJone","Ziyod"));
     }
 
     @SafeVarargs
