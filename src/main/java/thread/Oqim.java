@@ -11,6 +11,7 @@ public class Oqim{
             Thread.sleep(1000);
 
             System.out.println(massive[i]);
+            System.out.println(System.currentTimeMillis());
         }
     }
 }

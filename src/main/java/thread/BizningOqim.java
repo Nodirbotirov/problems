@@ -1,17 +1,17 @@
 package thread;
 
 public class BizningOqim implements Runnable{
-    private int uxlashDavomiyligi;
+    private final int uxlashDavomiyligi;
 
     public BizningOqim(int uxlashDavomiyligi){
         this.uxlashDavomiyligi = uxlashDavomiyligi;
     }
     @Override
     public void run() {
-        String oqimNomi = Thread.currentThread().getName();
+        String threadFirst = Thread.currentThread().getName();
 
-        for (int sanoq =1; sanoq<=10; sanoq++){
-            System.out.format("%sdan %d-habar%n", oqimNomi, sanoq);
+        for (int count =1; count<=10; count++){
+            System.out.format("%sdan %d-habar%n", threadFirst, count);
         }
         try {
             Thread.sleep(uxlashDavomiyligi);
