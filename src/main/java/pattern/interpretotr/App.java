@@ -12,7 +12,6 @@ public class App {
         FieldExpression fieldTwo = new FieldExpression("pin");
 
         TableExpression table = new TableExpression("bank_account");
-
         fieldOne.interpret(context);
         fieldTwo.interpret(context);
         table.interpret(context);
