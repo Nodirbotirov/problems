@@ -2,7 +2,7 @@ package code;
 
 public class Conditions {
     public static void main(String[] args) {
-        int x = 6;
+        int x = 5;
         int y = 6;
 
         if (x > y){

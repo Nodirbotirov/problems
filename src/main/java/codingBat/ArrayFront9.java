@@ -13,6 +13,6 @@ public class ArrayFront9 {
         for (int i=0; i<end; i++){
             if (nums[i] ==9) System.out.println(true);
         }
-        System.out.println(false);
+
     }
 }
