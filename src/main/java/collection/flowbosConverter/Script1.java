@@ -2,6 +2,7 @@ package collection.flowbosConverter;
 
 import collection.flowbosConverter.client.ModbusClient;
 
+import java.io.IOException;
 import java.util.*;
 
 import collection.flowbosConverter.payload.Payload;
@@ -13,7 +14,6 @@ import java.lang.reflect.Field;
 
 public class Script1 {
     public static void main(String[] args) {
-
     }
 
     private static final Logger log = LoggerFactory.getLogger(Script1.class);
@@ -21,6 +21,7 @@ public class Script1 {
     private Map<String, ModbusObj> modbusClients = new HashMap();
 
     public Script1() {
+
     }
 
     // {
@@ -55,6 +56,42 @@ public class Script1 {
             return Payload.conflict();
         }
     }
+
+
+
+    public static Object execute1(LinkedHashMap<String, Object> args) throws IOException {
+        ModbusClient client =new ModbusClient("192.168.140.180", 502);
+        Map<String, Float> previousResult = new HashMap<>();
+        int[] adrs = {631, 633, 635, 637, 639, 641};
+        String[] names = { "Flowboss_Chasovoy", "Flowboss_segodnya", "Flowboss_sutochniy", "Flowboss_perepad", "Flowboss_Davlenie", "Flowboss_Temp" };
+
+        client.Connect();
+        log.info("Connected to modbus server. ");
+
+        while (true) {
+            try {
+                Map<String, Float> currentResult = new HashMap<>();
+
+                for (int i = 0; i < adrs.length; i++){
+                    int[] ints = client.ReadHoldingRegisters(adrs[1], 2);
+                    Float res = ModbusClient.ConvertRegistersToFloat(ints, RegisterOrder.HighLow);
+                    currentResult.put(names[i], res);
+                }
+
+                if (!currentResult.equals(previousResult)){
+                    log.info("New data detected: " + currentResult);
+                    previousResult = new HashMap<>(currentResult);
+                    Payload.ok(currentResult);
+                }
+
+                Thread.sleep(5000);
+            }catch (Exception e) {
+                log.error("Connecting failed: " + e.toString());
+                return Payload.conflict();
+            }
+        }
+    }
+
 
     public static <T> T convert(LinkedHashMap<String, Object> map, Class<T> clazz) throws Exception {
         T obj = clazz.getDeclaredConstructor().newInstance();
