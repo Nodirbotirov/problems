@@ -66,7 +66,7 @@ public class TimerExample {
         Object execute = timer.execute(client,server);
         Object execute1 = timer.execute(zevardi, server);
         System.out.println(execute+"dasdadasd");
-        System.out.println(execute1 +"sevardi");
+        System.out.println(execute1 +"zevardi");
         // Add a shutdown hook to stop the server gracefully
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             server.stop();
