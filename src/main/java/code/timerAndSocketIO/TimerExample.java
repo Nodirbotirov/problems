@@ -18,7 +18,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 @RequestMapping("/api")
 public class TimerExample {
-    ServerSocket ss = new ServerSocket(6666);
+    ServerSocket ss = new ServerSocket(8001);
     private static final Logger log = LoggerFactory.getLogger(TimerExample.class);
 
     public TimerExample() throws IOException {
@@ -27,7 +27,7 @@ public class TimerExample {
     public static void main(String[] args) throws Exception {
 
         ModbusClient client = new ModbusClient("192.168.140.188", 502);
-        ModbusClient zevardi = new ModbusClient("192.168.140.184", 502);
+        ModbusClient zevardi = new ModbusClient("192.168.183.104", 502);
         TimerExample timer = new TimerExample();
 
         Configuration config = new Configuration();
@@ -86,8 +86,8 @@ public class TimerExample {
         TimerTask task = new TimerTask() {
 //            ModbusClient client = new ModbusClient("192.168.140.188", 502);
             Map<String, Float> previousResult = new HashMap<>();
-            int[] adrs = {631, 633, 635, 637, 639, 641};
-            String[] names = { "Flowboss_Chasovoy", "Flowboss_segodnya", "Flowboss_sutochniy", "Flowboss_perepad", "Flowboss_Davlenie", "Flowboss_Temp" };
+            int[] adrs = {631, 633, 635, 637, 639, 641, 643};
+            String[] names = { "Flowboss_Chasovoy", "Flowboss_segodnya", "Flowboss_sutochniy", "Flowboss_perepad", "Flowboss_Davlenie", "Flowboss_Temp", "LastHour-Rasxod" };
             @Override
             public void run() {
                 try {
@@ -107,8 +107,8 @@ public class TimerExample {
                     server.getBroadcastOperations().sendEvent("zevardi", currentResult);
                     System.out.println(currentResult + "ok");
                 }catch (Exception e) {
-                    log.error(e.toString());
-
+//                    Payload.conflict(e.toString());
+                    e.printStackTrace();
                 }
 //                catch (SocketException e) {
 //                    throw new RuntimeException(e);
